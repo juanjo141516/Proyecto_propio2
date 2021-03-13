@@ -1,0 +1,321 @@
+$color-header: #fff;
+@import 'header';
+@import 'nav';
+@import 'main';
+@import 'aside';
+@import 'footer';
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:"header"
+                        "main"
+                        "aside"
+                        "footer";
+    height: 100%;
+    min-height: 100vh;
+
+}
+@media screen and (min-width:1200px) {
+    body{
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 9% 9% 81% 6%;
+        grid-template-areas: "header header header header header header"
+                            "main main main nav nav nav"
+                            "aside aside aside aside aside aside"
+                            "footer footer footer footer footer footer";
+    }
+    header{
+        grid-area: header;
+        font-size: 30px;
+        display: inline-flex;
+        #titulo_header{
+            padding: 22px;
+            margin:0px 276px 0px auto;
+            font-size: larger;
+        }
+        figure{
+            font-size: 16px;
+            display: inline-flex;
+            margin: initial;
+            img{
+                height: 50px;
+                width: 50px;
+                margin: auto;
+                opacity: 60%;
+                clip-path: circle(50% at 50% 50%);
+            }
+            figcaption{
+                margin: auto 20px;
+            }
+        }
+    }
+    nav{
+        grid-area: nav;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        #label_buscar{
+            color: white;
+            font-size: 18px;
+            grid-column: 1/3;
+            margin: auto ;
+        }
+        #input_buscar{
+            width: 100%;
+            margin: auto 0;
+            grid-column: 3/6;
+        }
+        #boton_buscar{
+            grid-column: 6/7;
+            display: grid;
+            margin: auto;
+            #logo_buscador{
+                height: 40px;
+                width: 40px;
+                padding-top: 5px;
+                margin: auto;  
+            }
+        } 
+    }
+    main{
+        grid-area: main; 
+        .bars {
+            display: none;
+        }
+        ul {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            #li_user{
+                display: none;
+            }
+            #li_inicio{
+                grid-column: 1/2;
+            }
+            #li_usuarios{
+                grid-column: 2/3;
+            }
+            #li_clientes{
+                grid-column: 3/4;
+            }
+            #li_proveedores{
+                grid-column: 4/5;
+            }
+            #li_productos{
+                grid-column: 5/6;
+                border: none;
+            }
+            #li_cerrar_sesion{
+                display: none;
+            }
+            li{
+                border-right: 1px solid black;
+                figure{
+                    margin: 12px 0 0 0;
+                    display: flex;
+                    flex-direction: column;
+                    img{
+                        height: 30px;
+                        width: 30px;
+                        margin: auto;
+                    }
+                    figcaption{
+                        margin: 12.5px 13px;
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                    .icono_siguiente{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    aside{
+        grid-area: aside;
+        justify-items: normal;
+        border-top: none;
+        font-size: 17px;
+        #container_fieldset{
+            border: 2px solid black;
+            margin: 10px 18%;
+            fieldset{
+                border: 1px solid black;
+                margin: 6px 5% 21px 5%;
+                padding-bottom: 0;
+                legend{
+                    text-align: start;
+                }
+                .formulario{
+                    display: grid;
+                    grid-template-columns: repeat(6,1fr);
+                    label{
+                        grid-column: 1/3;
+                        width: 80%;
+                        margin: auto 0;
+                    }
+                    input{
+                        width: 250px;
+                        grid-column: 3/7;
+                        margin: auto 0;
+                    }
+                    #input_codigo{
+                        grid-column: 3/5;
+                        width: 100%;
+                    }
+                    #boton_validacion{
+                        margin: auto 43px;
+                        grid-column: 5/7;
+                    }
+                    #input_nombre{
+                        width: 100%;
+                        grid-column:3/5 ;
+                    }
+                    #input_abreviatura{
+                        grid-column: 3/5;
+                        width: 50%;
+                    }
+                    #input_categorias{
+                        grid-column: 3/5;
+                        width: 65%;
+                    }
+                    #input_RUC{
+                        grid-column: 3/5;
+                        width: 65%;
+                    }
+                    #input_precio{
+                        grid-column: 3/5;
+                        width: 50%;
+                    }
+                    #input_color{
+                        width: 5%;
+                    }
+                }
+                #div_fecha{
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    #label_fecha{
+                        grid-column: 1/3;
+                    }
+                    #input_fecha{
+                        grid-column: 3/5;
+                        margin: auto 0;
+                    }
+                    #logo_fecha{
+                        grid-column: 5/6;
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+                #div_estado{
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    #label_estado{
+                        grid-column: 1/3;
+                        margin: auto 0;
+                    }
+                    #div_radio_activo{
+                        grid-column: 3/4;
+                    }
+                    #div_radio_suspendido{
+                        grid-column: 4/5;
+                    }
+                    #div_radio_de_baja{
+                        grid-column: 5/7;
+                    }
+                }
+                #div_impuesto{
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    #label_impuesto{
+                        grid-column: 1/3;
+                    }
+                    #checkbox_impuesto{
+                        grid-column: 3/7;
+                        width: 20px;
+                        margin: auto 0;
+                    }
+                }
+                #div_foto{
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    #label_foto{
+                        grid-column: 1/3;
+                    }
+                    #tamaño_input_foto{
+                        grid-column: 3/5;
+                    }
+                    #logo_de_galeria{
+                        grid-column: 5/7;
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+                #div_descripcion{
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    #label_descripcion{
+                        grid-column: 1/3;
+                        margin: auto 0;
+                    }
+                    #tamaño_descripcion{
+                        grid-column: 3/7;
+                        margin: auto 0;
+                    }
+                }
+                #div_botones{
+                    grid-template-areas: "guardar limpiar";
+                    justify-items:start;
+                    margin: 28px 0;
+                    #boton_limpiar{
+                        grid-area: limpiar;
+                        margin: 0 0 0 73px;
+                        height: 30px;
+                        figure{
+                            margin: 0;
+                            img{
+                                height: 20px;
+                                width: 20px;
+                                display: none;
+                            }
+                        }
+                    }
+                    #boton_guardar{
+                        grid-area: guardar;
+                        margin:0 0 0 225px;
+                        height: 30px;
+                        figure{
+                            margin: 0;
+                            img{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        grid-area:footer;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        a{
+            margin: auto 0;
+            border: none;
+        }
+        #que_hacemos{
+            grid-column: 1/2;
+        }
+        #enlaces_principales{
+            grid-column: 2/3;
+        }
+        #contactanos{
+            grid-column: 3/4;
+        }
+    }
+}

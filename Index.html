@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="index.js"></script>
+    <title>Página web</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo_header">Sistema integrado de gestión</h1>
+        <figure>
+            <img id="foto_usuario" src="imagenes/header/usuario.png" alt="Foto de usuario">
+            <figcaption>Usuario</figcaption>
+        </figure>
+    </header>
+    <nav>
+        <label id="label_buscar" for="Buscar">Buscar en la web</label>
+        <input id="input_buscar" type="search">
+        <button id="boton_buscar">                
+            <img id="logo_buscador" src="imagenes/nav/lens.png" alt="Lupa">
+            Buscar
+        </button>
+    </nav>
+    <main> 
+        <a id="toggle"  class="bars" href="javascript:openCloseMenu()">&#9776;</a>
+        <ul id="Menu">
+            <li id="li_user">
+                <figure>
+                    <img id="imagen_user" src="imagenes/main/user.png" alt="Logo user">
+                    <figcaption>
+                        <a href="">User</a>
+                    </figcaption>
+                </figure>
+            </li>
+            <li id="li_inicio">
+                <figure>
+                    <img src="imagenes/main/home.png" alt="icono inicio">
+                    <figcaption>
+                        <a href="">Inicio</a>
+                    </figcaption>
+                    <img class="icono_siguiente" src="imagenes/main/next.png" alt="icono next">
+                </figure>
+            </li>
+            <li id="li_usuarios">
+                <figure>
+                    <img src="imagenes/main/users.png" alt="icono usuarios">
+                    <figcaption>
+                        <a href="">Usuarios</a>
+                    </figcaption>
+                    <img class="icono_siguiente" src="imagenes/main/next.png" alt="icono next">
+                </figure>
+            </li>
+            <li id="li_clientes">
+                <figure>
+                    <img src="imagenes/main/customers.png" alt="icono clientes">
+                    <figcaption>
+                        <a href="">Clientes</a>
+                    </figcaption>
+                    <img class="icono_siguiente" src="imagenes/main/next.png" alt="icono next">
+                </figure>
+            </li>
+            <li id="li_proveedores">
+                <figure>
+                    <img src="imagenes/main/vendors.png" alt="icono proveedores">
+                    <figcaption>
+                        <a href="">Proveedores</a>
+                    </figcaption>
+                    <img class="icono_siguiente" src="imagenes/main/next.png" alt="icono next">
+                </figure>
+            </li>
+            <li id="li_productos">
+                <figure>
+                    <img src="imagenes/main/products.png" alt="icono productos">
+                    <figcaption>
+                        <a href="">Productos</a>
+                    </figcaption>
+                    <img class="icono_siguiente" src="imagenes/main/next.png" alt="icono next">
+                </figure>
+            </li>
+            <li id="li_cerrar_sesion">
+                <figure>
+                    <img src="imagenes/main/sign_off.png" alt="icono cerrar sesión">
+                    <figcaption>
+                        <a href="">Cerrar sesión</a>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </main>
+    <aside>
+       <div id="container_fieldset">
+        <fieldset>
+            <legend>Agregar productos</legend>
+            <form action="venta" method="POST">
+                <div class="formulario">
+                    <label for="codigo">Código* :</label>
+                    <input id="input_codigo" type="tel" pattern="[0-9]{6}" title="Debe ingresar solo 6 números" required>
+                    <button id="boton_validacion">Validar</button>    
+                </div>
+            
+                <div class="formulario">
+                    <label for="nombre">Nombre* :</label>
+                    <input id="input_nombre" type="text" type="tel" placeholder="Solo letras y números" pattern="[a-zA-Z0-9\s\´\-]{2,100}" title="Solo letras" required>
+                </div>
+
+                <div class="formulario">
+                    <label for="abreviatura">Abreviatura :</label>
+                    <input id="input_abreviatura" type="text" placeholder="Solo letras" pattern="[a-zA-Z\s\.]{2,10}" title="Solo letras">
+                </div>
+
+                <div class="formulario">
+                    <label for="list_categorias">Categorias* :</label>
+                    <input list="list_categorias" id="input_categorias" required>
+                    <datalist id="list_categorias"> 
+                        <option value="Panes especiales"></option>
+                        <option value="Lácteos"></option>
+                        <option value="Pasteles"></option>
+                        <option value="Lista cerrada de elementos "></option>
+                    </datalist>
+                </div>
+
+                <div class="formulario">
+                    <label for="ruc">RUC Proveedor* :</label>
+                    <input id="input_RUC" type="tel" maxlength="11"pattern="[0-9]{11}" placeholder="Solo números" title="Solo números" required>
+                </div>
+
+                <div class="formulario">
+                    <label for="precio">Precio* :</label>
+                    <input id="input_precio" type="number" min="0" step="0.01" max="10000000" pattern="[0-9]" required>
+                </div>
+
+                <div class="formulario">
+                    <label id="label_color" for="color">Color etiqueta :</label>
+                    <input id="input_color" type="color">
+                </div>
+
+                <div id="div_fecha">
+                    <label id="label_fecha" for="fecha">Fecha* :</label>
+                    <input id="input_fecha" type="date" required>
+                    <img id="logo_fecha" src="imagenes/aside/date.png" alt="logo de la fecha">
+                </div>
+
+                <div id="div_estado">
+                    <label id="label_estado" for="estado">Estado* :</label>
+                    <div id="div_radio_activo">
+                            <input type="radio" name="Estado" class="radio_de_estados">
+                            <label class="estados" for="activo">Activo</label>
+                    </div>
+                    <div id="div_radio_suspendido">
+                            <input type="radio" name="Estado" class="radio_de_estados">
+                        <label class="estados" for="Suspendido">Suspendido</label>
+                    </div>
+                    <div id="div_radio_de_baja">
+                            <input type="radio" name="Estado" class="radio_de_estados">
+                            <label class="estados" for="De baja">De baja</label>
+                     </div>
+                </div>
+
+                <div id="div_impuesto" class="formulario">
+                    <label id="label_impuesto" for="afecto_impuesto">Afecto a impuesto* :</label>    
+                    <input type="checkbox" id="checkbox_impuesto">
+                </div>
+
+                <div id="div_foto"> 
+                    <label id="label_foto" for="Seleccione_foto">Foto*</label>
+                    <input id="tamaño_input_foto" type="file" name="foto" size="5mb" accept="image/png, image/jpg">
+                    <img id="logo_de_galeria" src="imagenes/aside/photo.png" alt="Logo galeria">
+                </div>
+
+                <div id="div_descripcion">
+                    <label id="label_descripcion" for="descripcion">Descripcion* :</label>
+                    <textarea id="tamaño_descripcion"></textarea>
+                </div>
+
+                <div id="div_botones">
+                    <button type="reset" id="boton_limpiar">
+                        <figure>
+                            <img id="imagen_boton_limpiar" src="https://cdn.icon-icons.com/icons2/1238/PNG/128/paintbrush_83820.png" alt="pincel">
+                            <figcaption>Limpiar</figcaption>
+                        </figure>
+                    </button>
+                    <button type="submit" id="boton_guardar">
+                        <figure>
+                            <img id="imagen_boton_guardar" src="https://cdn.icon-icons.com/icons2/912/PNG/128/save-disk_icon-icons.com_71576.png" alt="guardado">
+                            <figcaption>Guardar</figcaption>
+                        </figure>
+                    </button>
+                </div>
+            </form>
+        </fieldset>
+       </div>
+    </aside>
+    <footer> 
+        <a id="que_hacemos" href="https://www.youtube.com/" target="_BLANK">¿Qué hacemos?</a>
+        <a id="enlaces_principales" href="https://www.google.com/" target="_BLANK">Enlaces principales</a>
+        <a id="contactanos" href="https://zoom.idat.edu.pe/" target="_BLANCK">Contáctanos</a>
+    </footer>  
+</body>
+</html>
