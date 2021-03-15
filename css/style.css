@@ -4,7 +4,7 @@ header {
   -ms-grid-column: 1;
   grid-area: header;
   background-color: blue;
-  color: white;
+  color: #fff;
 }
 
 header #titulo_header {
@@ -20,7 +20,7 @@ header figure {
 nav {
   grid-area: nav;
   background-color: #9BAFEB;
-  color: white;
+  color: #fff;
   display: none;
 }
 

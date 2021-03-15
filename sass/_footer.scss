@@ -1,12 +1,12 @@
 footer{
     grid-area: footer;
-    background-color: cornflowerblue;
+    background-color: $background-footer;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     text-align: center;
     font-size: 15px;
     a{
-        color:black;
+        color:$color-footer;
         text-decoration: none;
         grid-column: 1/4;
         padding: auto ;

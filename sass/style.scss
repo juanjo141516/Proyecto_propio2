@@ -1,4 +1,14 @@
+$background-header: blue;
 $color-header: #fff;
+$background-nav:#9BAFEB;
+$color-nav:#fff;
+$background-main: gainsboro;
+$color-main: black;
+$background-aside:lightblue;
+$color-aside:black;
+$background-footer:cornflowerblue;
+$color-footer:black;
+ 
 @import 'header';
 @import 'nav';
 @import 'main';

@@ -1,7 +1,7 @@
 main{
     grid-area: main;
     font-family: 'Courier New', Courier, monospace;
-    background-color: gainsboro;
+    background-color: $background-main;
     ul{
         list-style: none;
         display: block;

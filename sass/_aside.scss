@@ -1,7 +1,7 @@
 aside{
     grid-area: aside;
-    background-color: lightblue;
-    color: black;
+    background-color: $background-aside;
+    color: $color-aside;
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     display: grid;
