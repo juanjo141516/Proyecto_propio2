@@ -84,13 +84,11 @@ body{
     }
     main{
         grid-area: main; 
-        .bars {
-            display: none;
-        }
-        ul {
+        ul{
             display: grid;
-            grid-template-columns: repeat(5,1fr);
-            #li_user{
+            grid-template-columns: repeat(5, 1fr);
+            height: 100%;
+            #primer_li{
                 display: none;
             }
             #li_inicio{
@@ -109,24 +107,25 @@ body{
                 grid-column: 5/6;
                 border: none;
             }
-            #li_cerrar_sesion{
-                display: none;
-            }
-            li{
+            .li_menu{
+                display: initial;
                 border-right: 1px solid black;
                 figure{
-                    margin: 12px 0 0 0;
+                    margin: 0 auto;
                     display: flex;
                     flex-direction: column;
+                    height: 100%;
                     img{
                         height: 30px;
                         width: 30px;
-                        margin: auto;
+                        margin: 15px auto;
                     }
                     figcaption{
-                        margin: 12.5px 13px;
+                        margin: 3px auto;
                         a {
                             font-size: 16px;
+                            text-decoration: none;
+                            color: black;
                         }
                     }
                     .icono_siguiente{
@@ -319,3 +318,4 @@ body{
         }
     }
 }
+
