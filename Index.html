@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="index.js"></script>
-    <title>Tarea domiciliria 3</title>
+    <title>Página web</title>
 </head>
 <body>
     <header>
@@ -24,18 +23,77 @@
             Buscar
         </button>
     </nav>
-    <main> 
-        <a id="toggle"  class="bars" href="javascript:openCloseMenu()">&#9776;</a>
-        <ul id="Menu">
-            <li id="li_user">
-                <figure>
-                    <img id="imagen_user" src="imagenes/main/user.png" alt="Logo user">
-                    <figcaption>
-                        <a href="">User</a>
-                    </figcaption>
-                </figure>
+    <main>
+        <ul>
+            <li id="primer_li">
+                <img id="imagen_burger"src="https://cdn.icon-icons.com/icons2/2024/PNG/128/lines_menu_burger_icon_123889.png" alt="">
+                <div class="submenu">
+                    <ul id="ul_submenu">
+                        <li class="li_submenu" id="li_submenu_user">
+                            <figure id="figure_user">
+                                <img src="imagenes/main/user.png" alt="">
+                                <figcaption>
+                                    <a href="">User</a>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="li_submenu">
+                            <figure>
+                                <img class="logos_menu" src="imagenes/main/home.png" alt="">
+                                <figcaption>
+                                    <a href="">Inicio</a>
+                                </figcaption>
+                                <img class="imagen_next" src="imagenes/main/next.png" alt="">
+                            </figure>
+                        </li>
+                        <li class="li_submenu">
+                            <figure>
+                                <img class="logos_menu" src="imagenes/main/users.png" alt="">
+                                <figcaption>
+                                    <a href="">Usuarios</a>
+                                </figcaption>
+                                <img class="imagen_next" src="imagenes/main/next.png" alt="">
+                            </figure>
+                        </li>
+                        <li class="li_submenu">
+                            <figure>
+                                <img class="logos_menu" src="imagenes/main/customers.png" alt="">
+                                <figcaption>
+                                    <a href="">Clientes</a>
+                                </figcaption>
+                                <img class="imagen_next" src="imagenes/main/next.png" alt="">
+                            </figure>
+                        </li>
+                        <li class="li_submenu">
+                            <figure>
+                                <img class="logos_menu" src="imagenes/main/vendors.png" alt="">
+                                <figcaption>
+                                    <a href="">Proveedores</a>
+                                </figcaption>
+                                <img class="imagen_next" src="imagenes/main/next.png" alt="">
+                            </figure>
+                        </li>
+                        <li class="li_submenu">
+                            <figure>
+                                <img class="logos_menu" src="imagenes/main/products.png" alt="">
+                                <figcaption>
+                                    <a href="">Productos</a>
+                                </figcaption>
+                                <img class="imagen_next" src="imagenes/main/next.png" alt="">
+                            </figure>
+                        </li>
+                        <li class="li_submenu">
+                            <figure>
+                                <img class="logos_menu" src="imagenes/main/sign_off.png" alt="">
+                                <figcaption>
+                                    <a href="">Cerrar sesion</a>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
             </li>
-            <li id="li_inicio">
+            <li id="li_inicio" class="li_menu">
                 <figure>
                     <img src="imagenes/main/home.png" alt="icono inicio">
                     <figcaption>
@@ -44,7 +102,7 @@
                     <img class="icono_siguiente" src="imagenes/main/next.png" alt="icono next">
                 </figure>
             </li>
-            <li id="li_usuarios">
+            <li id="li_usuarios" class="li_menu">
                 <figure>
                     <img src="imagenes/main/users.png" alt="icono usuarios">
                     <figcaption>
@@ -53,7 +111,7 @@
                     <img class="icono_siguiente" src="imagenes/main/next.png" alt="icono next">
                 </figure>
             </li>
-            <li id="li_clientes">
+            <li id="li_clientes" class="li_menu">
                 <figure>
                     <img src="imagenes/main/customers.png" alt="icono clientes">
                     <figcaption>
@@ -62,7 +120,7 @@
                     <img class="icono_siguiente" src="imagenes/main/next.png" alt="icono next">
                 </figure>
             </li>
-            <li id="li_proveedores">
+            <li id="li_proveedores" class="li_menu">
                 <figure>
                     <img src="imagenes/main/vendors.png" alt="icono proveedores">
                     <figcaption>
@@ -71,21 +129,13 @@
                     <img class="icono_siguiente" src="imagenes/main/next.png" alt="icono next">
                 </figure>
             </li>
-            <li id="li_productos">
+            <li id="li_productos" class="li_menu">
                 <figure>
                     <img src="imagenes/main/products.png" alt="icono productos">
                     <figcaption>
                         <a href="">Productos</a>
                     </figcaption>
                     <img class="icono_siguiente" src="imagenes/main/next.png" alt="icono next">
-                </figure>
-            </li>
-            <li id="li_cerrar_sesion">
-                <figure>
-                    <img src="imagenes/main/sign_off.png" alt="icono cerrar sesión">
-                    <figcaption>
-                        <a href="">Cerrar sesión</a>
-                    </figcaption>
                 </figure>
             </li>
         </ul>
