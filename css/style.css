@@ -53,7 +53,7 @@ main ul #primer_li #imagen_burger {
 
 main ul #primer_li .submenu {
   position: absolute;
-  background-color: #F5EB7E;
+  background-color: gainsboro;
   display: none;
   top: -1px;
   left: 27vw;
