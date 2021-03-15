@@ -430,9 +430,20 @@ aside fieldset #div_botones #boton_limpiar {
   grid-column: 1/2;
 }
 
-aside fieldset #div_botones #boton_limpiar #imagen_boton_limpiar {
-  height: 10px;
-  width: 10px;
+aside fieldset #div_botones #boton_limpiar figure {
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+aside fieldset #div_botones #boton_limpiar figure #imagen_boton_limpiar {
+  height: 25px;
+  width: 25px;
+}
+
+aside fieldset #div_botones #boton_limpiar figure figcaption {
+  margin: auto 8px;
 }
 
 aside fieldset #div_botones #boton_guardar {
@@ -441,9 +452,20 @@ aside fieldset #div_botones #boton_guardar {
   grid-column: 2/3;
 }
 
-aside fieldset #div_botones #boton_guardar #imagen_boton_guardar {
-  height: 10px;
-  width: 10px;
+aside fieldset #div_botones #boton_guardar figure {
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+aside fieldset #div_botones #boton_guardar figure #imagen_boton_guardar {
+  height: 25px;
+  width: 25px;
+}
+
+aside fieldset #div_botones #boton_guardar figure figcaption {
+  margin: auto 8px;
 }
 
 footer {
@@ -647,7 +669,7 @@ body {
     grid-area: aside;
     justify-items: normal;
     border-top: none;
-    font-size: 17px;
+    font-size: 15px;
   }
   aside #container_fieldset {
     border: 2px solid black;
@@ -660,6 +682,7 @@ body {
   }
   aside #container_fieldset fieldset legend {
     text-align: start;
+    font-size: 17px;
   }
   aside #container_fieldset fieldset .formulario {
     display: -ms-grid;
