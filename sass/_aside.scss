@@ -167,17 +167,30 @@ aside{
            }
             #boton_limpiar{
                 grid-column: 1/2;
-                #imagen_boton_limpiar{
-                    
-                    height: 10px;
-                    width: 10px;
+                figure{
+                    margin: 0;
+                    display: inline-flex;
+                    #imagen_boton_limpiar{
+                        height: 25px;
+                        width: 25px;
+                    }
+                    figcaption{
+                        margin: auto 8px;
+                    }
                 }
             }
             #boton_guardar{
                 grid-column: 2/3;
-                #imagen_boton_guardar{
-                    height: 10px;
-                    width: 10px;
+                figure{
+                    margin: 0;
+                    display: inline-flex;
+                    #imagen_boton_guardar{
+                        height: 25px;
+                        width: 25px;
+                    }
+                    figcaption{
+                        margin: auto 8px;
+                    }
                 }
             }
         }    
