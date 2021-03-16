@@ -8,7 +8,7 @@ $background-aside:lightblue;
 $color-aside:black;
 $background-footer:cornflowerblue;
 $color-footer:black;
- 
+
 @import 'header';
 @import 'nav';
 @import 'main';
@@ -42,21 +42,33 @@ body{
     }
     header{
         grid-area: header;
-        font-size: 30px;
-        display: inline-flex;
+        font-size: 2em;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
         #titulo_header{
+            grid-column: 2/8;
+            text-align: center;
             padding: 22px;
-            margin:0px 276px 0px auto;
-            font-size: larger;
+            margin: 0;
+            animation-name: titulo-header;
+            animation-duration: 7s;
+        }
+        @keyframes titulo-header{
+            from{font-size:0.5em;
+            }
+            to{font-size:1.3em;
+
+            }
         }
         figure{
+            grid-column: 8/9;
             font-size: 16px;
             display: inline-flex;
             margin: initial;
             img{
                 height: 50px;
                 width: 50px;
-                margin: auto;
+                margin: auto 0;
                 opacity: 60%;
                 clip-path: circle(50% at 50% 50%);
             }
@@ -79,18 +91,37 @@ body{
             width: 100%;
             margin: auto 0;
             grid-column: 3/6;
+            border-radius: 20px;
+        }
+        #input_buscar:hover{
+            border: 2px solid yellow;
         }
         #boton_buscar{
             grid-column: 6/7;
             display: grid;
             margin: auto;
+            border-radius: 10px;
+            border: 1px solid black;
+            background-color: white;
+            transition-property: background-color;
+            transition-duration: 0.5s;
             #logo_buscador{
                 height: 40px;
                 width: 40px;
                 padding-top: 5px;
                 margin: auto;  
             }
-        } 
+        }
+        #boton_buscar:hover{
+            background-color: gainsboro;
+            color: #2577F1;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        #boton_buscar:active{
+            background-color: #F4B362 ;
+            color: rgb(52, 23, 180);
+        }
     }
     main{
         grid-area: main; 
@@ -132,10 +163,17 @@ body{
                     }
                     figcaption{
                         margin: 3px auto;
-                        a {
-                            font-size: 16px;
+                        a{
+                            font-size: 15px;
                             text-decoration: none;
                             color: black;
+                        }
+                        a:visited{
+                            color: brown;
+                        }
+                        a:hover{
+                            font-size: 17px;
+                            font-weight: bold;
                         }
                     }
                     .icono_siguiente{
@@ -159,7 +197,7 @@ body{
                 padding-bottom: 0;
                 legend{
                     text-align: start;
-                    font-size: 17px;
+                    font-size: 1;
                 }
                 .formulario{
                     display: grid;
@@ -167,13 +205,25 @@ body{
                     label{
                         grid-column: 1/3;
                         width: 80%;
-                        margin: auto 0;
+                        margin: 2px 0;
                     }
                     input{
                         width: 250px;
                         grid-column: 3/7;
                         margin: auto 0;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                        padding-left: 10px;
+                        transition-property: background-color;
+                        transition-duration: 0.4s;
+                        
                     }
+                    input:hover{
+                        border: 2px solid red;
+                    }
+                    input:focus{
+                        background-color: #EEF2AB;
+                    }           
                     #input_codigo{
                         grid-column: 3/5;
                         width: 100%;
@@ -181,6 +231,23 @@ body{
                     #boton_validacion{
                         margin: auto 43px;
                         grid-column: 5/7;
+                        border-radius: 30px;
+                        background-color: #C30D32;
+                        color: white;
+                        width: 40%;
+                        transition-property: background-color;
+                        transition-duration: 0.7s;
+                    }
+                    #boton_validacion:hover{
+                        font-weight: bold;
+                        background-color: black;
+                        color: #27D36C;
+                        border: 2px solid #27D36C;
+                    }
+                    #boton_validacion:active{
+                        color: yellow;
+                        border: 3px solid yellow;
+                        
                     }
                     #input_nombre{
                         width: 100%;
@@ -204,6 +271,7 @@ body{
                     }
                     #input_color{
                         width: 5%;
+                        padding-left: 3px;
                     }
                 }
                 #div_fecha{
@@ -215,7 +283,18 @@ body{
                     #input_fecha{
                         grid-column: 3/5;
                         margin: auto 0;
+                        border-radius: 30px;
+                        border: 1px solid black;
+                        padding-left: 5px ;
+                        transition-property: background-color;
+                        transition-duration: 0.4s;
                     }
+                    #input_fecha:hover{
+                        border: 2px solid red;
+                    }
+                    #input_fecha:focus{
+                        background-color: #EEF2AB;
+                    }  
                     #logo_fecha{
                         grid-column: 5/6;
                         height: 30px;
@@ -276,16 +355,46 @@ body{
                     #tamaño_descripcion{
                         grid-column: 3/7;
                         margin: auto 0;
+                        border: 1px solid black;
+                        border-radius: 10px;
+                        transition-property: background-color;
+                        transition-duration: 0.4s;
                     }
+                    #tamaño_descripcion:hover{
+                        border: 2px solid red;
+                    }
+                    #tamaño_descripcion:focus{
+                        background-color: #EEF2AB;
+                    }  
                 }
                 #div_botones{
                     grid-template-areas: "guardar limpiar";
                     justify-items:start;
                     margin: 28px 0;
+                    button{
+                        background-color: #121DA4;
+                        color: white;
+                        border-radius: 10px;
+                        transition-property: background-color;
+                        transition-duration: 0.7s;
+                    }
+                    button:hover{
+                        font-size: 15px;
+                        border:3px solid red;
+                        font-weight: bold;
+                        color: red;
+                        background-color: black;
+                    }
+                    button:active{
+                        background-color:white;
+                        color:#2577F1;
+                        border: 5px solid #2577F1;
+                    }
                     #boton_limpiar{
                         grid-area: limpiar;
                         margin: 0 0 0 73px;
                         height: 30px;
+
                         figure{
                             margin: 0;
                             img{
@@ -314,9 +423,18 @@ body{
         grid-area:footer;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        a{
+        a:link{
             margin: auto 0;
             border: none;
+            color:black;
+            font-size: 20px;
+        }    
+        a:visited{
+            color: #4B39F5;
+        }
+        a:hover{
+            font-weight: bold ;
+            font-size: 22px;
         }
         #que_hacemos{
             grid-column: 1/2;
