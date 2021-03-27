@@ -1,11 +1,19 @@
 header{
-    grid-area: header;
-    background-color: $background-header;
-    color: $color-header;
+    @include estilos_header;
     #titulo_header{
         text-align: center;
-        font-size: 1.3em;
+        font-size: 21px;
         padding: 10px;
+        animation-name: titulo-header-mobile;
+        animation-duration: 7s;
+    }
+    @keyframes titulo-header-mobile{
+        from{
+            font-size: 0.2em;
+        }
+        to{
+            font-size: 21px;
+        }
     }
     figure{
         display: none;

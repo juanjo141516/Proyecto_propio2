@@ -1,0 +1,37 @@
+
+@mixin estilos_header {
+    grid-area: header;
+    background-color: $background-header;
+    color: $color-header;
+}
+@mixin estilos_nav{
+    grid-area: nav;
+    background-color: $background-nav;
+    color:$color-nav;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+@mixin estilos_main {
+    grid-area: main;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: $background-main;
+}
+@mixin estilos_aside{
+    grid-area: aside;
+    background-color: $background-aside;
+    color: $color-aside;
+    font-family: 'Courier New', Courier, monospace;
+}
+@mixin texto_mobile_aside{
+    font-size: 13px;
+}
+@mixin texto_web_aside{
+    font-size: 16px;
+    justify-items: normal;
+    border-top: none;
+}
+@mixin estilos_footer{
+    grid-area: footer;
+    background-color: $background-footer;
+    display: grid;
+}

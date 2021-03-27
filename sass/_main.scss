@@ -1,13 +1,12 @@
 main{
-    grid-area: main;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: $background-main;
+    @include estilos_main;
+    @include texto_mobile_aside;
     ul{
         list-style: none;
         display: block;
         padding: 0;
         margin: 0;
-        font-size: 13px;
+        
         #primer_li{
             padding: 10px 12px;
             position: relative;
@@ -31,7 +30,6 @@ main{
                     width: 100%;
                     .li_submenu{
                         margin: 18px 0;
-                        width: 100%;
                         text-align: center;
                         figure{
                             display: grid;
@@ -42,7 +40,7 @@ main{
                                 width: 20px;
                                 grid-column: 1/2;
                             }
-                            figcaption{
+                            .texto_menu{
                                 text-align: start;
                                 grid-column: 2/5;
                                 a{
@@ -63,8 +61,6 @@ main{
                         background-color:black;
                         height: 58px;
                         figure{
-                            display: grid;
-                            grid-template-columns: repeat(5, 1fr);
                             margin: 13px 0 13px 25px;
                             img{
                                 height: 30px;
